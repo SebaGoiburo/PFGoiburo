@@ -10,64 +10,93 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Inicia Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!--Finaliza Bootstrap-->
     <link rel="stylesheet" href="../css/estilo.css" />
     <title>Red Fresco</title>
   </head>
   <body>
     <header>
-      <img class="logo" src="img/fresco.png" alt="logo red fresco" />
-      <nav class="navbar">
-        <ul>
-          <li><a href="/pages/queHacemos.html">¿Qué hacemos?</a></li>
-          <li><a href="/pages/serParte.html">Ser parte</a></li>
-          <li><a href="/index.html">Inicio</a></li>
-          <li><a href="pages/redFresco.html">Red fresco</a></li>
-          <li><a href="/pages/contacto.html">Contacto</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html">
+            <img class="logo" src="/img/fresco.png" alt="logo red fresco" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li><a href="/pages/queHacemos.html">¿Qué hacemos?</a></li>
+              <li><a href="/pages/serParte.html">Ser parte</a></li>
+              <li><a href="/index.html">Inicio</a></li>
+              <li><a href="/pages/redFresco.html">Red fresco</a></li>
+              <li><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+            <form class="buscar d-flex">
+              <input
+                id="caja_buscar"
+                type="search"
+                name="busquedaDeProducto"
+                placeholder="Busque su producto..."
+              />
+              <input
+                id="lupa"
+                type="image"
+                src="/img/icono_lupa.png"
+                alt="Buscar"
+                value="Buscar"
+              />
+            </form>
+          </div>
+        </div>
       </nav>
-      <div class="buscar">
-        <input
-          id="caja_buscar"
-          type="search"
-          name="busquedaDeProducto"
-          placeholder="Busque su producto..."
-        />
-        <input
-          id="lupa"
-          type="image"
-          src="../img/icono_lupa.png"
-          alt="Buscar"
-          value="Buscar"
-        />
-      </div>
     </header>
-    <main id="redFresco">
-      <div class="cuerpoCentralRedFresco">
-        <img
-          id="imagenRedFresco"
-          src="/img/fresco.gif"
-          alt="icono de ubicación"
-        />
-        <div class="tituloPagina">
-          <h1>Red Fresco</h1>
+    <main class="container-fluid" id="redFresco">
+      <div class="row">
+        <div
+          class="cuerpoCentralRedFresco col-xl-5 col-lg-3 col-md-4 col-sm-12 col-12"
+        >
+          <img
+            id="imagenRedFresco"
+            src="/img/fresco.gif"
+            alt="icono de ubicación"
+          />
+          <div class="tituloPagina">
+            <h1>Red Fresco</h1>
+          </div>
+          <div class="bajada">
+            <p>
+              Frutas y verduras a domicilio,<br />
+              dondes estés y como quieras pagar.
+            </p>
+          </div>
         </div>
-        <div class="bajada">
-          <p>
-            Frutas y verduras a domicilio,<br />
-            dondes estés y como quieras pagar.
-          </p>
+        <div class="mapa col-xl-6 col-lg-8 col-md-7 col-sm-12 col-12">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53489.85304654828!2d-68.53291141673822!3d-33.079737555096244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e42fe55fa3acf%3A0x1675e9efa43d9102!2sSan%20Mart%C3%ADn%2C%20Mendoza!5e0!3m2!1ses!2sar!4v1690844847884!5m2!1ses!2sar"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
-      </div>
-      <div class="mapa">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53489.85304654828!2d-68.53291141673822!3d-33.079737555096244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e42fe55fa3acf%3A0x1675e9efa43d9102!2sSan%20Mart%C3%ADn%2C%20Mendoza!5e0!3m2!1ses!2sar!4v1690844847884!5m2!1ses!2sar"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
       </div>
     </main>
     <div>

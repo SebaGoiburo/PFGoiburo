@@ -110,9 +110,9 @@ background-size: cover;
   height: calc(100vh - 150px);
   /* max-width: 65%; */
   margin: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  /* padding: 10px; */
   /* margin-left: 70px; */
   /* margin-top: 30px;
   margin-bottom: 15px; */
@@ -131,8 +131,8 @@ background-size: cover;
   height: calc(100vh - 150px);
   max-width: 65%;
   margin: auto;
-  margin-left: 70px;
-  padding-left: 130px;
+  /* margin-left: 70px;
+  padding-left: 130px; */
   padding-bottom: 70px;
   display: flex;
   flex-direction: column;
@@ -142,11 +142,11 @@ background-size: cover;
 
 .cuerpoCentralRedFresco{
   height: calc(100vh - 150px);
-  max-width: 50%;
+  /* max-width: 50%; */
   margin: auto;
-  margin-left: 70px;
+  /* margin-left: 70px;
   padding-left: 130px;
-  padding-bottom: 70px;
+  padding-bottom: 70px; */
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -156,12 +156,17 @@ background-size: cover;
 .tituloPagina{
   font-family: 'DM Sans', sans-serif;
   color: #00AA95;
-  font-size: 50px;
+  margin-left: 40px;
+}
+
+.tituloPagina h1{
+  font-size: 60px;
 }
 
 .bajada{
   font-family: 'DM Sans', sans-serif;
-  font-size: 22px;
+  font-size: 26px;
+  margin-left: 40px;
 }
 
 ::-webkit-scrollbar {
@@ -250,6 +255,9 @@ background-size: cover;
   z-index: 3;
 }
 
+#ticketSerParte{
+  opacity: 0.9;
+}
 
 #tituloTicketSerParte{
   font-size: 35px;
@@ -372,7 +380,7 @@ margin: 15px;
 }
 
 #imagenRedFresco{
-  height: 150px;
+  height: 25%;
   width: auto;
 }
 
@@ -384,6 +392,7 @@ margin: 15px;
 
 iframe{
   border-radius: 20px;
+  width: 100%;
 }
 
 @media screen and (max-width: 1200px) {
