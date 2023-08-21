@@ -14,17 +14,17 @@
 header{
   height: 80px;
   width: 100%;
-  padding: 20px 60px;
+  padding-left: 20px;
+  padding-right: 20px;
   font-size: 22px;
   font-family: 'DM Sans', sans-serif;
   border-bottom: 4px solid #317A72;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .navbar{
   display: flex;
+  justify-content: space-between;
+  align-items: center
 }
 
 .logo{
@@ -74,7 +74,7 @@ header{
 
 #caja_buscar::placeholder {
   color:#7ac9c0;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
 }
 
