@@ -52,9 +52,9 @@ header{
   font-weight: bold;
   font-size: 22px;
   color: #317A72;
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
   transition-timing-function: ease-in-out;
-  transition-duration: 0.1s;
+  transition-duration: 0.2s;
 }
 
 .navbar a:active{
@@ -292,8 +292,8 @@ hr{
   height: 120px;
   width: auto;
   position: fixed;
-  bottom: 45px;
-  right: 75px;
+  bottom: 30px;
+  right: 30px;
 }
 
 footer{
@@ -380,46 +380,13 @@ iframe{
   border-radius: 20px;
 }
 
-@media screen and (min-width: 700px) and (max-width: 900px) {
-  .contenedorProductos{
-    margin-left: 10px;
+@media screen and (max-width: 1200px) {
+  .navbar a{
+    font-size: 16px;
   }
-  .ticket{
-    margin-right: 10px;
-  }
-}
-
-@media screen and (min-width: 520px) and (max-width: 699px) {
-  .contenedorProductos{
-    margin-left: 10px;
-
-  }
-  .cardProducto{
-    margin: 5px;
-  }
-  .ticket{
-    margin-right: 10px;
+  .navbar a:hover{
+    font-weight: bold;
+    font-size: 16px;
   }
 }
 
-@media screen and (max-width: 520px) {
-  .main{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .contenedorProductos{
-    height: 60%;
-    width: 100%;
-    
-  }
-
-  .cardProducto{
-    margin: 5px;
-  }
-  .ticket{
-    height: 30%;
-    width: 100%;
-    margin-right: 10px;
-  }
-}
