@@ -85,10 +85,11 @@ header{
 }
 
 main{
-  height: calc(100vh - 130px);
-  display: flex;
-  justify-content: center;
+  /* height: calc(100vh - 130px); */
+  /* display: flex;
+  justify-content: center; */
   background-color:  #ffffff;
+
 }
 
 #queHacemos{
@@ -107,9 +108,12 @@ background-size: cover;
 
 .contenedorProductos{
   height: calc(100vh - 150px);
-  max-width: 65%;
+  /* max-width: 65%; */
   margin: auto;
-  margin-left: 70px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  /* margin-left: 70px; */
   /* margin-top: 30px;
   margin-bottom: 15px; */
   border-right: 3px solid #A8A8A8;
@@ -119,7 +123,7 @@ background-size: cover;
   border-radius: 30px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   overflow: scroll;
 }
 
@@ -169,7 +173,8 @@ background-size: cover;
   width: 150px;
   border: 2px solid #E0E0E0;
   border-radius: 10px;
-  margin: 15px;
+  margin: auto;
+  margin-top: 15px;
   padding: 5px;
   display: flex;
   flex-direction: column;
@@ -216,11 +221,11 @@ background-size: cover;
   border: 1px solid rgb(228, 228, 228);
   background-color: #ffffff88;
   border-radius: 3px;
-  height: 60vh;
-  width: 25%;
-  margin:auto;
-  margin-left: 25px;
-  margin-right: 70px;
+  height: 400px;
+  /* width: 25%; */
+  margin: auto;
+  /* margin-left: 25px;
+  margin-right: 70px; */
   padding: 22px;
   font-family: Roboto, Courier, Sans serif;
   font-size: small;
@@ -230,6 +235,7 @@ background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: scroll;
 }
 
 .formularioTicket{
@@ -388,5 +394,34 @@ iframe{
     font-weight: bold;
     font-size: 16px;
   }
+  .tituloTicket{
+    font-size: 18px;
+  }
+  .total{
+    font-size: 14px;
+  }
+  .precioTotal{
+    font-size: 14px;
+  }
+
 }
 
+@media screen and (max-width: 650px) {
+  
+  footer{
+    font-size: 10px;
+    padding: 10px;
+  }
+  
+  .fa-brands{
+  margin: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ticket{
+    height: 250px;
+    overflow-y: scroll;
+  }
+  
+}
