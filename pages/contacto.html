@@ -21,96 +21,107 @@
     <link rel="stylesheet" href="../css/estilo.css" />
     <title>Contacto</title>
   </head>
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <div class="container">
-        <a class="navbar-brand" href="/index.html">
-          <img class="logo" src="/img/fresco.png" alt="logo red fresco" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html">
+            <img class="logo" src="/img/fresco.png" alt="logo red fresco" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li><a href="/pages/queHacemos.html">¿Qué hacemos?</a></li>
+              <li><a href="/pages/serParte.html">Ser parte</a></li>
+              <li><a href="/index.html">Inicio</a></li>
+              <li><a href="/pages/redFresco.html">Red fresco</a></li>
+              <li><a href="/pages/contacto.html">Contacto</a></li>
+            </ul>
+            <form class="buscar d-flex">
+              <input
+                id="caja_buscar"
+                type="search"
+                name="busquedaDeProducto"
+                placeholder="Busque su producto..."
+              />
+              <input
+                id="lupa"
+                type="image"
+                src="/img/icono_lupa.png"
+                alt="Buscar"
+                value="Buscar"
+              />
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container-fluid" id="contacto">
+      <div class="row">
+        <div
+          class="cuerpoCentralNoIndex col-xl-7 col-lg-8 col-md-6 col-sm-12 col-12"
         >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li><a href="/pages/queHacemos.html">¿Qué hacemos?</a></li>
-            <li><a href="/pages/serParte.html">Ser parte</a></li>
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/pages/redFresco.html">Red fresco</a></li>
-            <li><a href="/pages/contacto.html">Contacto</a></li>
-          </ul>
-          <form class="buscar d-flex">
+          <div class="tituloPagina">
+            <h1>contactanos</h1>
+          </div>
+          <div class="bajada">
+            <p>
+              Estamos cerca. Estas son <br />
+              nuestras vías de comunicación
+            </p>
+          </div>
+        </div>
+        <div class="formularioTicket col-xl-4 col-lg-3 col-md-5 col-sm-6 col-6">
+          <div class="formulario">
             <input
-              id="caja_buscar"
-              type="search"
-              name="busquedaDeProducto"
-              placeholder="Busque su producto..."
+              type="text"
+              name="nombre"
+              placeholder="Nombre o Razón social"
             />
             <input
-              id="lupa"
-              type="image"
-              src="/img/icono_lupa.png"
-              alt="Buscar"
-              value="Buscar"
+              type="email"
+              name="correo"
+              placeholder="Correo electrónico"
             />
-          </form>
+            <input type="tel" name="telefono" placeholder="Teléfono" />
+            <input type="text" name="mensaje" placeholder="Mensaje..." />
+            <input id="enviar" type="submit" value="Enviar" />
+          </div>
         </div>
       </div>
-    </nav>
-  </header>
-  <main class="container-fluid" id="contacto">
-    <div class="row">
-      <div
-        class="cuerpoCentralNoIndex col-xl-7 col-lg-8 col-md-6 col-sm-12 col-12"
-      >
-        <div class="tituloPagina">
-          <h1>contactanos</h1>
-        </div>
-        <div class="bajada">
-          <p>
-            Estamos cerca. Estas son <br />
-            nuestras vías de comunicación
-          </p>
-        </div>
-      </div>
-      <div class="formularioTicket col-xl-4 col-lg-3 col-md-5 col-sm-6 col-6">
-        <div class="formulario">
-          <input
-            type="text"
-            name="nombre"
-            placeholder="Nombre o Razón social"
-          />
-          <input type="email" name="correo" placeholder="Correo electrónico" />
-          <input type="tel" name="telefono" placeholder="Teléfono" />
-          <input type="text" name="mensaje" placeholder="Mensaje..." />
-          <input id="enviar" type="submit" value="Enviar" />
-        </div>
-      </div>
+    </main>
+    <div>
+      <a href="#"
+        ><img
+          id="botonWhatsApp"
+          src="../img/iconosRedes/whatsapp.png"
+          alt="Icono de WhatsApp"
+      /></a>
     </div>
-  </main>
-  <div>
-    <a href="#"
-      ><img
-        id="botonWhatsApp"
-        src="../img/iconosRedes/whatsapp.png"
-        alt="Icono de WhatsApp"
-    /></a>
-  </div>
-  <footer>
-    <p class="agencia">Diseñado por Exacta</p>
-    <div class="redes">
-      <i class="fa-brands fa-facebook"></i>
-      <i class="fa-brands fa-twitter"></i>
-      <i class="fa-brands fa-linkedin"></i>
-    </div>
-    <p class="derechos">Todos los derechos reservados por Red Fresco</p>
-  </footer>
-  <body></body>
+    <footer>
+      <p class="agencia">Diseñado por Exacta</p>
+      <div class="redes">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+      <p class="derechos">Todos los derechos reservados por Red Fresco</p>
+    </footer>
+    <!--JavaScript Bootstrap-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
