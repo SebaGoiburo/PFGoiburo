@@ -11,14 +11,20 @@ $alturaHeader: 13vh;
 $alturaFooter: 10vh;
 $alturaMain: calc(100vh - $alturaHeader - $alturaFooter);
 
+$titulosFont: 'DM Sans', sans-serif;
+$colorPrimario:#00AA95;
+$colorSecundario: #317A72;
+
+
+
 header{
   height: $alturaHeader;
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 22px;
-  font-family: 'DM Sans', sans-serif;
-  border-bottom: 4px solid #317A72;
+  font-family: $titulosFont;
+  border-bottom: 4px solid $colorSecundario;
     .navbar{
       display: flex;
       justify-content: space-between;
@@ -39,7 +45,7 @@ header{
                 padding: 12px;
                   a{
                     text-decoration: none;
-                    color: #00AA95;
+                    color: $colorPrimario;
                       &:hover{
                         font-weight: bold;
                         font-size: 22px;
@@ -61,11 +67,11 @@ header{
             align-items: center;
               #caja_buscar{
                 height: 25px;
-                border: 1px solid #00AA95;
+                border: 1px solid $colorPrimario;
                 border-radius: 10px;
                   &::placeholder{
                     font-size: medium;
-                    color: #00AA95;
+                    color: $colorPrimario;
                     text-align: center;
                     vertical-align: middle;
                   }
@@ -129,7 +135,7 @@ main{
                     font-weight: normal;
                   }
                   h4{
-                    font-family: 'DM Sans', sans-serif;
+                    font-family: $titulosFont;
                     font-size: 22px;
                     font-weight: bold;
                   }
@@ -156,7 +162,7 @@ main{
           width: 350px;
           padding: 25px;
           padding-bottom: 0px;
-          border: 2px solid #00AA95;
+          border: 2px solid $colorPrimario;
           border-radius: 15px;
           background-color: #ffffffa2;
           display: flex;
@@ -165,7 +171,7 @@ main{
             input{
               height: 25px;
               width: 300px;;
-              border: 1px solid #00AA95;
+              border: 1px solid $colorPrimario;
               border-radius: 15px;
               margin: 5px;
                 &::placeholder {
@@ -178,7 +184,7 @@ main{
             #enviar{
               height: 30px;
               width: auto;
-              background-color: #00AA95;
+              background-color: $colorPrimario;
               border-color: #388b82;
               color: #ffffff;
               padding: 5px;
@@ -190,7 +196,7 @@ main{
                 &:hover{
                   height: 35px;
                   width: auto;
-                  background-color: #00AA95;
+                  background-color: $colorPrimario;
                   color: #ffffff;
                   font-weight: bold;
                   padding: 5px;
@@ -211,19 +217,36 @@ main{
       flex-direction: column;
       align-items: start;
       justify-content: center;
+        #imagenRedFresco{
+          height: 25%;
+          width: auto;
+        }
+      
+    }
+    .mapa{
+      margin: auto;
+      iframe{
+        border: 2px solid $colorPrimario;
+        border-radius: 20px;
+        width: 100%;
+      }
     }
 }
 
 .tituloPagina{
-  font-family: 'DM Sans', sans-serif;
-  color: #00AA95;
+  font-family: $titulosFont;
+  color: $colorPrimario;
   margin-left: 40px;
     h1{
       font-size: 60px;
+      animation-duration: 2s;
+      animation-name: aparecer;
+      animation-iteration-count: 1;
     }
 }
+
 .bajada{
-  font-family: 'DM Sans', sans-serif;
+  font-family: $titulosFont;
   font-size: 26px;
   margin-left: 40px;
 }
@@ -262,6 +285,9 @@ background-size: cover;
   flex-direction: column;
   justify-content: space-between;
   overflow-y: scroll;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
     .tituloTicket{
       text-align: center;
     }
@@ -299,7 +325,7 @@ background-size: cover;
   font-family: Roboto, Courier, Sans serif;
   font-size: small;
   z-index: 3;
-  border: 2px solid #00AA95;
+  border: 2px solid $colorPrimario;
   border-radius: 15px;
   background-color: #ffffffa2;
     .formulario{
@@ -310,7 +336,7 @@ background-size: cover;
         input{
           height: 30px;
           width: 90%;
-          border: 1px solid #00AA95;
+          border: 1px solid $colorPrimario;
           border-radius: 15px;
           margin: auto;
           margin-top: 15px;
@@ -324,7 +350,7 @@ background-size: cover;
         #enviar{
           height: 30px;
           width: auto;
-          background-color: #00AA95;
+          background-color: $colorPrimario;
           border-color: #388b82;
           color: #ffffff;
           padding: 5px;
@@ -336,7 +362,7 @@ background-size: cover;
             &:hover{
               height: 35px;
               width: auto;
-              background-color: #00AA95;
+              background-color: $colorPrimario;
               color: #ffffff;
               font-weight: bold;
               padding: 5px;
@@ -354,14 +380,14 @@ background-size: cover;
   opacity: 0.8;
 }
 
-#tituloTicketSerParte{
-  font-size: 35px;
-  text-align: center;
+#tituloTicketSerParte h1{
+  font-size: 45px;
+  margin: auto;
 }
 
-#bajadaSerParte{
+#bajadaSerParte p{
   font-size: 18px;
-  text-align: center;
+  margin: auto;
   margin-top: -40px;
 }
 
@@ -375,11 +401,18 @@ hr{
   position: fixed;
   bottom: 30px;
   right: 30px;
+  animation-name: whatsappFlotante;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+
 }
+
 
 footer{
   height: $alturaFooter;
-  background-color: #00AA95;
+  background-color: $colorPrimario;
   color: #fff;
   text-align: center;
   font-size: 15px;
@@ -393,22 +426,23 @@ footer{
 }
 
 
-
-#imagenRedFresco{
-  height: 25%;
-  width: auto;
-}
-
-.mapa{
-  margin: auto;
-  iframe{
-    border: 2px solid #00AA95;
-    border-radius: 20px;
-    width: 100%;
+@keyframes whatsappFlotante{
+  from {
+    bottom: 30px;
+  }
+  to {
+    bottom: 40px;
   }
 }
 
-
+@keyframes aparecer{
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 @media screen and (max-width: 1200px) {
   .navbar a{

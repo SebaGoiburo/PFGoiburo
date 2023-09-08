@@ -202,6 +202,18 @@ main .cuerpoCentralRedFresco {
   align-items: start;
   justify-content: center;
 }
+main .cuerpoCentralRedFresco #imagenRedFresco {
+  height: 25%;
+  width: auto;
+}
+main .mapa {
+  margin: auto;
+}
+main .mapa iframe {
+  border: 2px solid #00AA95;
+  border-radius: 20px;
+  width: 100%;
+}
 
 .tituloPagina {
   font-family: "DM Sans", sans-serif;
@@ -210,6 +222,9 @@ main .cuerpoCentralRedFresco {
 }
 .tituloPagina h1 {
   font-size: 60px;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
 }
 
 .bajada {
@@ -254,6 +269,9 @@ main .cuerpoCentralRedFresco {
   flex-direction: column;
   justify-content: space-between;
   overflow-y: scroll;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
 }
 .ticket .tituloTicket {
   text-align: center;
@@ -343,14 +361,14 @@ main .cuerpoCentralRedFresco {
   opacity: 0.8;
 }
 
-#tituloTicketSerParte {
-  font-size: 35px;
-  text-align: center;
+#tituloTicketSerParte h1 {
+  font-size: 45px;
+  margin: auto;
 }
 
-#bajadaSerParte {
+#bajadaSerParte p {
   font-size: 18px;
-  text-align: center;
+  margin: auto;
   margin-top: -40px;
 }
 
@@ -364,6 +382,11 @@ hr {
   position: fixed;
   bottom: 30px;
   right: 30px;
+  animation-name: whatsappFlotante;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
 }
 
 footer {
@@ -381,20 +404,22 @@ footer .fa-brands {
   margin: 15px;
 }
 
-#imagenRedFresco {
-  height: 25%;
-  width: auto;
+@keyframes whatsappFlotante {
+  from {
+    bottom: 30px;
+  }
+  to {
+    bottom: 40px;
+  }
 }
-
-.mapa {
-  margin: auto;
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-.mapa iframe {
-  border: 2px solid #00AA95;
-  border-radius: 20px;
-  width: 100%;
-}
-
 @media screen and (max-width: 1200px) {
   .navbar a {
     font-size: 16px;
