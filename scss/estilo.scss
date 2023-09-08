@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,400;9..40,700;9..40,1000&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$alturaHeader: 13vh;
+$alturaFooter: 10vh;
+$alturaMain: calc(100vh - $alturaHeader - $alturaFooter);
+
+header{
+  height: $alturaHeader;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 22px;
+  font-family: 'DM Sans', sans-serif;
+  border-bottom: 4px solid #317A72;
+    .navbar{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+        .navbar-brand{
+          .logo{
+            justify-content: start;
+            height: 50px;
+            width: auto;
+          }
+        }
+        .collapse{
+          ul{
+            list-style: none;
+            justify-content: center;
+              li{
+                display: inline-block;
+                padding: 12px;
+                  a{
+                    text-decoration: none;
+                    color: #00AA95;
+                      &:hover{
+                        font-weight: bold;
+                        font-size: 22px;
+                        color: #317A72;
+                        transition-delay: 0.1s;
+                        transition-timing-function: ease-in-out;
+                        transition-duration: 0.2s;
+                      }
+                      &:active{
+                        color: #1e4944
+                      }
+                  }
+              }
+          }
+          .buscar{
+            justify-content: end;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+              #caja_buscar{
+                height: 25px;
+                border: 1px solid #00AA95;
+                border-radius: 10px;
+                  &::placeholder{
+                    font-size: medium;
+                    color: #00AA95;
+                    text-align: center;
+                    vertical-align: middle;
+                  }
+              }
+              #lupa{
+                height: 20px;
+                width: auto;
+                margin-left: 10px;
+              }
+          }
+        }
+    }
+    
+}
+
+main{
+  height: $alturaMain;
+  background-color:  #ffffff;
+    .contenedorProductos{
+      height: calc($alturaMain - 30px);
+      margin: auto;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      border-right: 3px solid #A8A8A8;
+      border-left: 1px solid #A8A8A8;
+      border-top: 2px solid #A8A8A8;
+      border-bottom: 4px solid #A8A8A8;
+      border-radius: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      overflow: scroll;
+        .cardProducto{
+          height: 150px;
+          width: 150px;
+          border: 2px solid #E0E0E0;
+          border-radius: 10px;
+          margin: auto;
+          margin-top: 15px;
+          padding: 5px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+            &:hover{
+              box-shadow: 1px 8px 20px grey;
+              -webkit-transition:  box-shadow .2s ease-in;
+            }
+            img{
+              height: 60px;
+              width: 60px;
+            }
+            .descripcionProducto{
+              display: flex;
+              justify-content: space-between;
+              .nombreYPrecio{
+                width: 40%;
+                  h3{
+                    font-family: 'DM Sans', sans-serif;
+                    font-size: 20px;
+                    font-weight: normal;
+                  }
+                  h4{
+                    font-family: 'DM Sans', sans-serif;
+                    font-size: 22px;
+                    font-weight: bold;
+                  }
+              }
+              .cantidad{
+                border: none;
+                font-size: 20px;
+                width: 40%;
+              }
+            }
+        }
+    }
+    .cuerpoCentralNoIndex{
+      height: calc($alturaMain - 30px);
+      max-width: 65%;
+      margin: auto;
+      /* margin-left: 70px;
+      padding-left: 130px; */
+      padding-bottom: 70px;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+    }
+    .cuerpoCentralRedFresco{
+      height: calc($alturaMain - 30px);
+      /* max-width: 50%; */
+      margin: auto;
+      /* margin-left: 70px;
+      padding-left: 130px;
+      padding-bottom: 70px; */
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+    }
+}
+
+.tituloPagina{
+  font-family: 'DM Sans', sans-serif;
+  color: #00AA95;
+  margin-left: 40px;
+    h1{
+      font-size: 60px;
+    }
+}
+.bajada{
+  font-family: 'DM Sans', sans-serif;
+  font-size: 26px;
+  margin-left: 40px;
+}
+
+#queHacemos{
+  background-image: url(../img/queHacemos.jpg);
+}
+#serParte{
+background-image: url(../img/seParte.jpg);
+background-size: cover;
+}
+#contacto{
+  background-image: url(/img/contacto.jpg);
+  background-size: cover;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.ticket{
+  border: 1px solid rgb(228, 228, 228);
+  background-color: #ffffff88;
+  border-radius: 3px;
+  height: 400px;
+  /* width: 25%; */
+  margin: auto;
+  /* margin-left: 25px;
+  margin-right: 70px; */
+  padding: 22px;
+  font-family: Roboto, Courier, Sans serif;
+  font-size: small;
+  color: #110DD3;
+  z-index: 3;
+  opacity: 0.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+}
+
+.formularioTicket{
+  height: 60vh;
+  width: 25%;
+  margin:auto;
+  margin-left: 25px;
+  margin-right: 150px;
+  padding: 22px;
+  font-family: Roboto, Courier, Sans serif;
+  font-size: small;
+  z-index: 3;
+}
+
+#ticketSerParte{
+  opacity: 0.9;
+}
+
+#tituloTicketSerParte{
+  font-size: 35px;
+  text-align: center;
+}
+
+#bajadaSerParte{
+  font-size: 18px;
+  text-align: center;
+  margin-top: -40px;
+}
+
+hr{
+  color: #110DD3;
+}
+
+.tituloTicket{
+  text-align: center;
+}
+
+.listaProductos{
+  height: auto;
+}
+
+.productoTicket{
+  float:left
+}
+
+.precioTicket{
+  float: right;
+}
+
+.total{
+  font-weight: bold;
+  font-size: 22px;
+  float: left;
+}
+
+.precioTotal{
+  font-weight: bold;
+  font-size: 22px;
+  float: right;
+}
+
+#botonWhatsApp{
+  height: 120px;
+  width: auto;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+footer{
+  height: $alturaFooter;
+  background-color: #00AA95;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-brands{
+margin: 15px;
+}
+
+.formulario{
+  height: 250px;
+  width: 350px;
+  padding: 25px;
+  padding-bottom: 0px;
+  border: 2px solid #00AA95;
+  border-radius: 15px;
+  background-color: #ffffffa2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formulario input{
+  height: 25px;
+  width: 300px;;
+  border: 1px solid #00AA95;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.formulario input::placeholder {
+  color:#7ac9c0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#enviar{
+  height: 30px;
+  width: auto;
+  background-color: #00AA95;
+  border-color: #388b82;
+  color: #ffffff;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#enviar:hover{
+  height: 35px;
+  width: auto;
+  background-color: #00AA95;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition-delay: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+}
+
+#imagenRedFresco{
+  height: 25%;
+  width: auto;
+}
+
+.mapa{
+  border: 2px solid #00AA95;
+  border-radius: 20px;
+  margin: auto;
+}
+
+iframe{
+  border-radius: 20px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar a{
+    font-size: 16px;
+  }
+  .navbar a:hover{
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .tituloTicket{
+    font-size: 18px;
+  }
+  .total{
+    font-size: 14px;
+  }
+  .precioTotal{
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  
+  footer{
+    font-size: 10px;
+    padding: 10px;
+  }
+  
+  .fa-brands{
+  margin: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ticket{
+    height: 250px;
+    overflow-y: scroll;
+  }
+  
+}
