@@ -18,7 +18,7 @@ $colorSecundario: #317A72;
 
 
 header{
-  height: $alturaHeader;
+  min-height: $alturaHeader;
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
@@ -225,10 +225,14 @@ main{
     }
     .mapa{
       margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       iframe{
         border: 2px solid $colorPrimario;
         border-radius: 20px;
-        width: 100%;
+        width: 90%;
+        height: calc($alturaMain - 60px);
       }
     }
 }
@@ -274,7 +278,7 @@ background-size: cover;
   height: 400px;
   max-width: 300px;
   margin: auto;
-  margin-right: 70px;
+  margin-right: 5%;
   padding: 22px;
   font-family: Roboto, Courier, Sans serif;
   font-size: small;
@@ -388,6 +392,7 @@ background-size: cover;
 #bajadaSerParte p{
   font-size: 18px;
   margin: auto;
+  text-align: center;
   margin-top: -40px;
 }
 
@@ -462,6 +467,12 @@ footer{
     font-size: 14px;
   }
 
+}
+
+@media screen and (max-width: 770px) {
+  main{
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 650px) {

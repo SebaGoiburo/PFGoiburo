@@ -6,7 +6,7 @@
 }
 
 header {
-  height: 13vh;
+  min-height: 13vh;
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
@@ -208,11 +208,15 @@ main .cuerpoCentralRedFresco #imagenRedFresco {
 }
 main .mapa {
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main .mapa iframe {
   border: 2px solid #00AA95;
   border-radius: 20px;
-  width: 100%;
+  width: 90%;
+  height: calc(77vh - 60px);
 }
 
 .tituloPagina {
@@ -258,7 +262,7 @@ main .mapa iframe {
   height: 400px;
   max-width: 300px;
   margin: auto;
-  margin-right: 70px;
+  margin-right: 5%;
   padding: 22px;
   font-family: Roboto, Courier, Sans serif;
   font-size: small;
@@ -369,6 +373,7 @@ main .mapa iframe {
 #bajadaSerParte p {
   font-size: 18px;
   margin: auto;
+  text-align: center;
   margin-top: -40px;
 }
 
@@ -436,6 +441,11 @@ footer .fa-brands {
   }
   .precioTotal {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 770px) {
+  main {
+    height: auto;
   }
 }
 @media screen and (max-width: 650px) {
