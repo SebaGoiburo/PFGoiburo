@@ -7,12 +7,13 @@
     <!-- Inicia Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--Finaliza Bootstrap-->
-    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="stylesheet" href="scss/estilo.css" />
     <title>Fresco</title>
     <meta name="description" content="Fresco es una red de verdulerías para comprar frutas y verduras online y gestionar envíos a domicilio, siempre al mejor precio">
     <meta name="keywords" content="verduleria, frutas y verduras, verduleria cerca de mi, comprar verduleria, fruteria, verdura a domicilio, verduleria mendoza, verduleria con envio, verduleria con delivery">
   </head>
   <body>
+    <!-- Menú -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container">
@@ -58,140 +59,48 @@
       </nav>
     </header>
     <main class="container-fluid">
+      <!-- Ventana emergente -->
+      <div id="popup" class="popup">
+        <form id="popupForm">
+          <label for="username">Nombre de usuario:</label>
+          <input type="text" id="username" required>
+          <br>
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" required>
+          <br>
+          <input type="button" value="Enviar" id="submitBtn">
+        </form>
+      </div>
+      <!-- Mensaje de Bievenida -->
+      <div id="mensajeBienvenida" class="mensajeBienvenida"></div>
+      <!-- Fila única contenedora del Contenedor Productos y del Ticket -->
       <div class="row">
+        <!-- Contenedor productos -->
         <div class="contenedorProductos col-xl-8 col-lg-9 col-md-7 col-sm-12 col-xs-12">
           <div class="container">
-            <div class="row row-cols-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
-              <div class="col cardProducto">
-                <img src="img/iconosVerdura/Apio.jpg">
-                <div class="descripcionProducto">
-                  <div class="nombreYPrecio">
-                    <h3 class="nombre">Apio</h3>
-                    <h4 class="precio">$25.6</h4>
-                  </div>
-                    <input class="cantidad" type="number" placeholder="0.00" step="0.01" min="0">
-                </div>
-              </div>
-              <div class="col cardProducto">
-                <img src="img/iconosVerdura/banana.jpg" alt="imagen fruta y verdura">
-                <div class="descripcionProducto">
-                  <div class="nombreYPrecio">
-                    <h3>Banana</h3>
-                    <h4>$90.5</h4>
-                  </div>
-                  <input class="cantidad" type="number" placeholder="0.00" step="0.01" min="0">
-                </div>
-              </div><div class="col cardProducto">
-                <img src="img/iconosVerdura/brocoli.jpg" alt="imagen fruta y verdura">
-                <div class="descripcionProducto">
-                  <div class="nombreYPrecio">
-                    <h3 class="nombre">Brocoli</h3>
-                    <h4 class="precio">$55.7</h4>
-                  </div>
-                  <input class="cantidad" type="number" placeholder="0.00" step="0.01" min="0">
-                </div>
-              </div><div class="col cardProducto">
-                <img src="img/iconosVerdura/frutilla.jpg" alt="imagen fruta y verdura">
-                <div class="descripcionProducto">
-                  <div class="nombreYPrecio">
-                    <h3 class="nombre">Frutilla</h3>
-                    <h4 class="precio">$300</h4>
-                  </div>
-                  <input class="cantidad" type="number" placeholder="0.00" step="0.01" min="0">
-                </div>
-              </div><div class="col cardProducto">
-                <img src="img/iconosVerdura/lechuga.jpg" alt="imagen fruta y verdura">
-                <div class="descripcionProducto">
-                  <div class="nombreYPrecio">
-                    <h3 class="nombre">Lechuga</h3>
-                    <h4 class="precio">$250</h4>
-                  </div>
-                  <input class="cantidad" type="number" placeholder="0.00" step="0.01" min="0">
-                </div>
-              </div><div class="col cardProducto">
-                <img src="img/iconosVerdura/limon.jpg" alt="imagen fruta y verdura">
-                <div class="descripcionProducto">
-                  <div class="nombreYPrecio">
-                    <h3 class="nombre">Limon</h3>
-                    <h4 class="precio">$220.5</h4>
-                  </div>
-                  <input class="cantidad" type="number" placeholder="0.00" step="0.01" min="0">
-                </div>
-              </div><div class="col cardProducto">
-                <img src="img/iconosVerdura/melon.jpg" alt="imagen fruta y verdura">
-                <div class="descripcionProducto">
-                  <div class="nombreYPrecio">
-                    <h3 class="nombre">Melón</h3>
-                    <h4 class="precio">$2440</h4>
-                  </div>
-                  <input class="cantidad" type="number" placeholder="0.00" step="0.01" min="0">
-                </div>
-              </div><div class="col cardProducto">
-                <img src="img/iconosVerdura/palta.jpg" alt="imagen fruta y verdura">
-                <div class="descripcionProducto">
-                  <div class="nombreYPrecio">
-                    <h3 class="nombre">Palta</h3>
-                    <h4 class="precio">$1550</h4>  
-                  </div>
-                  <input class="cantidad" type="number" placeholder="0.00" step="0.01" min="0">
-                </div>
-              </div><div class="col cardProducto">
-                <img src="img/iconosVerdura/papa.jpg" alt="imagen fruta y verdura">
-                <div class="descripcionProducto">
-                  <div class="nombreYPrecio">
-                    <h3 class="nombre">Papa</h3>
-                    <h4 class="precio">$210</h4>
-                  </div>
-                  <input class="cantidad" type="number" placeholder="0.00" step="0.01" min="0">
-                </div>
-              </div><div class="col cardProducto">
-                <img src="img/iconosVerdura/sandia.jpg" alt="imagen fruta y verdura">
-                <div class="descripcionProducto">
-                  <div class="nombreYPrecio">
-                    <h3 class="nombre">Sandía</h3>
-                    <h4 class="precio">$256</h4>
-                  </div>
-                  <input class="cantidad" type="number" placeholder="0.00" step="0.01" min="0">
-                </div>
-              </div><div class="col cardProducto">
-                <img src="img/iconosVerdura/tomate.jpg" alt="imagen fruta y verdura">
-                <div class="descripcionProducto">
-                  <div class="nombreYPrecio">
-                    <h3 class="nombre">Tomate</h3>
-                    <h4 class="precio">$180</h4>
-                  </div>
-                  <input class="cantidad" type="number" placeholder="0.00" step="0.01" min="0">
-                </div>
-              </div><div class="col cardProducto">
-                <img src="img/iconosVerdura/uvas.jpg" alt="imagen fruta y verdura">
-                <div class="descripcionProducto">
-                  <div class="nombreYPrecio">
-                    <h3 class="nombre">Uvas</h3>
-                    <h4 class="precio">$256</h4>
-                  </div>
-                  <input class="cantidad" type="number" placeholder="0.00" step="0.01" min="0">
-                </div>
-              </div>
+            <div class="row row-cols-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-2" id="filaProductos">
+              
             </div>
           </div>
         </div>
+        <!-- Ticket -->
         <div class="ticket col-xl-3 col-lg-2 col-md-3 col-sm-6 col-6">
           <div class="tituloTicket">
             <h2 class="fs-4">***FRESCO***</h2>
             <h3 class="fs-5">Frutas y verduras a domicilio</h3>
           </div>
           <hr>
-          <div class="listaProductos">
-            <span class="productoTicket">Papa</span> <span class="cantidad"></span> <span class="precioTicket">$0.00</span><br>
+          <div class="listaProductos" id="listaProductos">
+            <!-- <span class="productoTicket">Papa</span> <span class="cantidad"></span> <span class="precioTicket">$0.00</span><br>
             <span class="productoTicket">Tomate</span> <span class="cantidad"></span><span class="precioTicket">$0.00</span><br>
             <span class="productoTicket">Papa</span> <span class="cantidad"></span><span class="precioTicket">$0.00</span><br>
             <span class="productoTicket">Papa</span> <span class="cantidad"></span><span class="precioTicket">$0.00</span><br>
             <span class="productoTicket">Papa</span><span class="cantidad"></span> <span class="precioTicket">$0.00</span><br>
-            <span class="productoTicket">Papa</span> <span class="cantidad"></span><span class="precioTicket">$0.00</span><br>
+            <span class="productoTicket">Papa</span> <span class="cantidad"></span><span class="precioTicket">$0.00</span><br> -->
           </div>
           <hr>
           <div class="Totales">
-            <span class="total">***TOTAL***<span><span class="precioTotal">$00.00</span>
+            <span class="total">***TOTAL***<span><span class="precioTotal" id="precioTotal">$</span>
           </div>
         </div>
       </div>
@@ -210,5 +119,7 @@
     </footer>
     <!--JavaScript Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="/js/productos.js"></script>
+    <script src="/js/main.js"></script>
   <body>
 </html>

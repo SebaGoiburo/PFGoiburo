@@ -1,0 +1,529 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,400;9..40,700;9..40,1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  min-height: 13vh;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 22px;
+  font-family: "DM Sans", sans-serif;
+  border-bottom: 4px solid #317A72;
+}
+header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navbar .navbar-brand .logo {
+  justify-content: start;
+  height: 50px;
+  width: auto;
+}
+header .navbar .collapse ul {
+  list-style: none;
+  justify-content: center;
+}
+header .navbar .collapse ul li {
+  display: inline-block;
+  padding: 12px;
+}
+header .navbar .collapse ul li a {
+  text-decoration: none;
+  color: #00AA95;
+}
+header .navbar .collapse ul li a:hover {
+  font-weight: bold;
+  font-size: 22px;
+  color: #317A72;
+  transition-delay: 0.1s;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+header .navbar .collapse ul li a:active {
+  color: #1e4944;
+}
+header .navbar .collapse .buscar {
+  justify-content: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .navbar .collapse .buscar #caja_buscar {
+  height: 25px;
+  border: 1px solid #00AA95;
+  border-radius: 10px;
+}
+header .navbar .collapse .buscar #caja_buscar::-moz-placeholder {
+  font-size: medium;
+  color: #00AA95;
+  text-align: center;
+  vertical-align: middle;
+}
+header .navbar .collapse .buscar #caja_buscar::placeholder {
+  font-size: medium;
+  color: #00AA95;
+  text-align: center;
+  vertical-align: middle;
+}
+header .navbar .collapse .buscar #lupa {
+  height: 20px;
+  width: auto;
+  margin-left: 10px;
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+  z-index: 999;
+}
+#popup #popupForm {
+  padding: 15px;
+  border: 2px solid #00AA95;
+  border-radius: 15px;
+  background-color: rgba(0, 170, 149, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#popup #popupForm input {
+  height: 5vh;
+  width: 75%;
+  border: 1px solid #00AA95;
+  border-radius: 15px;
+  margin: 5px;
+}
+#popup #popupForm input::-moz-placeholder {
+  color: #7ac9c0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+#popup #popupForm input::placeholder {
+  color: #7ac9c0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#mensajeBienvenida {
+  font-family: "DM Sans", sans-serif;
+  font-size: 24px;
+  color: #00AA95;
+  font-weight: 400;
+  margin: 10px;
+}
+
+main {
+  min-height: 77vh;
+  background-color: #ffffff;
+}
+main .contenedorProductos {
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-right: 3px solid #A8A8A8;
+  border-left: 1px solid #A8A8A8;
+  border-top: 2px solid #A8A8A8;
+  border-bottom: 4px solid #A8A8A8;
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: scroll;
+}
+main .contenedorProductos .cardProducto {
+  height: 150px;
+  width: 150px;
+  border: 2px solid #E0E0E0;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 15px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+main .contenedorProductos .cardProducto:hover {
+  box-shadow: 1px 8px 20px grey;
+  -webkit-transition: box-shadow 0.2s ease-in;
+}
+main .contenedorProductos .cardProducto img {
+  height: 60px;
+  width: 60px;
+}
+main .contenedorProductos .cardProducto .descripcionProducto {
+  display: flex;
+  justify-content: space-between;
+}
+main .contenedorProductos .cardProducto .descripcionProducto .nombreYPrecio {
+  width: 40%;
+}
+main .contenedorProductos .cardProducto .descripcionProducto .nombreYPrecio h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+}
+main .contenedorProductos .cardProducto .descripcionProducto .nombreYPrecio h4 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+}
+main .contenedorProductos .cardProducto .descripcionProducto #cantidad {
+  border: none;
+  font-size: 20px;
+  width: 2vw;
+}
+main .cuerpoCentralNoIndex {
+  height: calc(77vh - 30px);
+  max-width: 50vw;
+  margin: auto;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+main .cuerpoCentralNoIndex .formulario {
+  height: 250px;
+  width: 350px;
+  padding: 25px;
+  padding-bottom: 0px;
+  border: 2px solid #00AA95;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.6352941176);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .cuerpoCentralNoIndex .formulario input {
+  height: 25px;
+  width: 300px;
+  border: 1px solid #00AA95;
+  border-radius: 15px;
+  margin: 5px;
+}
+main .cuerpoCentralNoIndex .formulario input::-moz-placeholder {
+  color: #7ac9c0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+main .cuerpoCentralNoIndex .formulario input::placeholder {
+  color: #7ac9c0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+main .cuerpoCentralNoIndex .formulario #enviar {
+  height: 30px;
+  width: auto;
+  background-color: #00AA95;
+  border-color: #388b82;
+  color: #ffffff;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+main .cuerpoCentralNoIndex .formulario #enviar:hover {
+  height: 35px;
+  width: auto;
+  background-color: #00AA95;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition-delay: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+main .cuerpoCentralRedFresco {
+  height: calc(77vh - 30px);
+  max-width: 50vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+main .cuerpoCentralRedFresco #imagenRedFresco {
+  height: 25%;
+  width: auto;
+}
+main .mapa {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .mapa iframe {
+  border: 2px solid #00AA95;
+  border-radius: 20px;
+  width: 90%;
+  height: calc(77vh - 60px);
+}
+
+.tituloPagina {
+  font-family: "DM Sans", sans-serif;
+  color: #00AA95;
+  margin-left: 40px;
+}
+.tituloPagina h1 {
+  font-size: 60px;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+
+.bajada {
+  font-family: "DM Sans", sans-serif;
+  font-size: 26px;
+  margin-left: 40px;
+}
+
+#queHacemos {
+  background-image: url(../img/queHacemos.jpg);
+}
+
+#serParte {
+  background-image: url(../img/seParte.jpg);
+  background-size: cover;
+}
+
+#contacto {
+  background-image: url(/img/contacto.jpg);
+  background-size: cover;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.ticket {
+  border: 1px solid rgb(228, 228, 228);
+  background-color: rgba(255, 255, 255, 0.5333333333);
+  border-radius: 3px;
+  height: 400px;
+  max-width: 300px;
+  margin: auto;
+  margin-right: 5%;
+  padding: 22px;
+  font-family: Roboto, Courier, Sans serif;
+  font-size: small;
+  color: #110DD3;
+  z-index: 3;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow-y: scroll;
+  animation-duration: 2s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+}
+.ticket .tituloTicket {
+  text-align: center;
+}
+.ticket .listaProductos {
+  height: auto;
+}
+.ticket .listaProductos .productoTicket {
+  float: left;
+}
+.ticket .listaProductos .precioTicket {
+  float: right;
+}
+.ticket .Totales .total {
+  font-weight: bold;
+  font-size: 22px;
+  float: left;
+}
+.ticket .Totales #precioTotal {
+  font-weight: bold;
+  font-size: 22px;
+  float: right;
+}
+
+.formularioTicket {
+  height: 60vh;
+  width: 25%;
+  margin: auto;
+  margin-left: 25px;
+  margin-right: 150px;
+  padding: 22px;
+  font-family: Roboto, Courier, Sans serif;
+  font-size: small;
+  z-index: 3;
+  border: 2px solid #00AA95;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.6352941176);
+}
+.formularioTicket .formulario {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.formularioTicket .formulario input {
+  height: 30px;
+  width: 90%;
+  border: 1px solid #00AA95;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 15px;
+}
+.formularioTicket .formulario input::-moz-placeholder {
+  color: #7ac9c0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+.formularioTicket .formulario input::placeholder {
+  color: #7ac9c0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+.formularioTicket .formulario #enviar {
+  height: 30px;
+  width: auto;
+  background-color: #00AA95;
+  border-color: #388b82;
+  color: #ffffff;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+.formularioTicket .formulario #enviar:hover {
+  height: 35px;
+  width: auto;
+  background-color: #00AA95;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  transition-delay: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+}
+
+#ticketSerParte {
+  opacity: 0.8;
+}
+
+#tituloTicketSerParte h1 {
+  font-size: 45px;
+  margin: auto;
+}
+
+#bajadaSerParte p {
+  font-size: 18px;
+  margin: auto;
+  text-align: center;
+  margin-top: -40px;
+}
+
+hr {
+  color: #110DD3;
+}
+
+#botonWhatsApp {
+  height: 120px;
+  width: auto;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  animation-name: whatsappFlotante;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+  animation-duration: 1.5s;
+}
+
+footer {
+  height: 10vh;
+  background-color: #00AA95;
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .fa-brands {
+  margin: 15px;
+}
+
+@keyframes whatsappFlotante {
+  from {
+    bottom: 30px;
+  }
+  to {
+    bottom: 40px;
+  }
+}
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .navbar a {
+    font-size: 16px;
+  }
+  .navbar a:hover {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  .tituloTicket {
+    font-size: 18px;
+  }
+  .total {
+    font-size: 14px;
+  }
+  .precioTotal {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 770px) {
+  main {
+    height: auto;
+  }
+}
+@media screen and (max-width: 650px) {
+  footer {
+    font-size: 10px;
+    padding: 10px;
+  }
+  .fa-brands {
+    margin: 5px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .ticket {
+    height: 250px;
+    overflow-y: scroll;
+  }
+}/*# sourceMappingURL=estilo.css.map */

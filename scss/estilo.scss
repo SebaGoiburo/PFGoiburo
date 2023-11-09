@@ -87,11 +87,52 @@ header{
     
 }
 
+#popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+  z-index: 999;
+  #popupForm{
+    padding: 15px;
+    border: 2px solid $colorPrimario;
+    border-radius: 15px;
+    background-color: rgba(0, 170, 149, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input{
+      height: 5vh;
+      width: 75%;
+      border: 1px solid $colorPrimario;
+      border-radius: 15px;
+      margin: 5px;
+      &::placeholder {
+        color:#7ac9c0;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+      }  
+    }
+  }
+}
+
+#mensajeBienvenida{
+  font-family: $titulosFont;
+  font-size: 24px;
+  color: $colorPrimario;
+  font-weight: 400;
+  margin: 10px;
+}
+
 main{
-  height: $alturaMain;
+  min-height: $alturaMain;
   background-color:  #ffffff;
     .contenedorProductos{
-      height: calc($alturaMain - 30px);
+      // height: calc($alturaMain - 30px);
       margin: auto;
       margin-top: 15px;
       margin-bottom: 15px;
@@ -140,10 +181,10 @@ main{
                     font-weight: bold;
                   }
               }
-              .cantidad{
+              #cantidad{
                 border: none;
                 font-size: 20px;
-                width: 40%;
+                width: 2vw;
               }
             }
         }
@@ -305,17 +346,16 @@ background-size: cover;
         }
     }
     .Totales{
-      .total{
-        font-weight: bold;
-        font-size: 22px;
-        float: left;
-      }
-      
-      .precioTotal{
-        font-weight: bold;
-        font-size: 22px;
-        float: right;
-      }
+        .total{
+          font-weight: bold;
+          font-size: 22px;
+          float: left
+        }
+        #precioTotal{
+          font-weight: bold;
+          font-size: 22px;
+          float: right;
+        }
     }
 }
 
@@ -494,3 +534,4 @@ footer{
   }
   
 }
+
