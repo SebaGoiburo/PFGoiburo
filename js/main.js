@@ -59,20 +59,46 @@ const cardProductos = productos.reduce(( acc, element) => {
 
 document.getElementById("filaProductos").innerHTML = cardProductos;
 
-//Renderizo la lista de productos que tengo en el Ticket(Carrito)
-let listadoProductosArray = [];
-let listadoProductosJson = localStorage.getItem("productosEnTicket");
-listadoProductosArray = JSON.parse(listadoProductosJson);
-
-const listaTicket = document.getElementById("listaProductos");
-
-function mostrarProductosEnTicket(listadoProductosArray){
-    
-}
-
-//Prueba de productos visualizados
+//Capturo productos visualizados dinamicamente
 const productosVisualizados = document.getElementsByClassName("cardProducto");
 console.log(productosVisualizados);
+
+//Renderizo la lista de productos que tengo en el Ticket(Carrito)
+const listaTicket = document.getElementById("listaProductos");
+let listadoProductosArray = [];
+
+function mostrarProductosEnTicket(listadoProductosArray){
+    for(let i=0; i<listadoProductosArray.length; i++){
+        const nuevaLinea = document.createElement('div');
+        nuevaLinea.innerHTML = `<span class="productoTicket"> ${listadoProductosArray[i].nombre} </span> <span class="precioTicket">${listadoProductosArray[i].precio}</span><img src="/img/iconosTicket/2.png" id="iconoBorrarProducto" alt="Borrar producto" onclick="borrarProducto(listadoProductosArray[i].nombre)"><br>`;
+        listaTicket.appendChild(nuevaLinea);
+    } 
+}
+
+//Si el localStorage no está vacío, muestro los productos
+if(localStorage.getItem("productosEnTicket")!== null){
+    let listadoProductosJson = localStorage.getItem("productosEnTicket");
+    listadoProductosArray = JSON.parse(listadoProductosJson);
+    mostrarProductosEnTicket(listadoProductosArray);
+}
+
+
+//TICKET- Creo función para borrar todo el ticket
+
+//TICKET- Creo función para borrar productos del ticket
+function borrarProducto(nombreProducto){
+    let jsonParaBorrarProducto = localStorage.getItem("productosEnTicket");
+    let arrayParaBorrarProducto = JSON.parse(jsonParaBorrarProducto);
+    let indiceBorrar = 0;
+    for(let i=0; i<arrayParaBorrarProducto.length;i++){
+        if(arrayParaBorrarProducto[i].nombre === nombreProducto){
+            indiceBorrar= i;
+        }
+    }
+}
+
+
+
 
 //Seteo un precio total en $0
 const precioTotal = document.getElementById("precioTotal");
@@ -92,7 +118,7 @@ for (let i =0; i < productosVisualizados.length; i++){
 
         //Creo una linea para renderizar en el div ticket el producto y el precio
         const nuevaLinea = document.createElement('div');
-        nuevaLinea.innerHTML = `<span class="productoTicket"> ${productosVisualizados[i].children[1].children[0].innerHTML} </span> <span class="precioTicket">${productosVisualizados[i].children[1].children[1].innerHTML}</span><br><img src="/img/iconosTicket/2.png" alt="Borrar producto" onclick="borrarProducto()">`;
+        nuevaLinea.innerHTML = `<span class="productoTicket"> ${productosVisualizados[i].children[1].children[0].innerHTML} </span> <span class="precioTicket">${productosVisualizados[i].children[1].children[1].innerHTML}</span><img src="/img/iconosTicket/2.png" alt="Borrar producto" id="iconoBorrarProducto" onclick="borrarProducto(productosVisualizados[i].children[1].children[0].innerHTML)"><br>`;
         listaTicket.appendChild(nuevaLinea);
 
         //Creo una variable para recibir el precio en String y parsearlo a double

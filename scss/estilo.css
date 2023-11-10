@@ -338,6 +338,11 @@ main .mapa iframe {
 .ticket .tituloTicket {
   text-align: center;
 }
+.ticket .tituloTicket #iconoBorrarTicket {
+  height: 4vh;
+  width: 2vw;
+  float: right;
+}
 .ticket .listaProductos {
   height: auto;
 }
@@ -345,6 +350,11 @@ main .mapa iframe {
   float: left;
 }
 .ticket .listaProductos .precioTicket {
+  float: right;
+}
+.ticket .listaProductos #iconoBorrarProducto {
+  height: 2vh;
+  width: 1vw;
   float: right;
 }
 .ticket .Totales .total {

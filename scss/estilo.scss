@@ -335,6 +335,11 @@ background-size: cover;
   animation-iteration-count: 1;
     .tituloTicket{
       text-align: center;
+      #iconoBorrarTicket{
+        height: 4vh;
+        width: 2vw;
+        float: right;
+      }
     }
     .listaProductos{
       height: auto;
@@ -342,6 +347,11 @@ background-size: cover;
           float:left
         }
         .precioTicket{
+          float: right;
+        }
+        #iconoBorrarProducto{
+          height: 2vh;
+          width: 1vw;
           float: right;
         }
     }
