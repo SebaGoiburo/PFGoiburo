@@ -150,8 +150,8 @@ for (let i =0; i < productosVisualizados.length; i++){
             text:`Agregaste ${productosVisualizados[i].children[1].children[0].innerHTML} a tu ticket!`,
             duration: 1500,
             style:{
-                background: "linear-gradient(to right, rgba(0, 170, 149, 0.6), rgba(0, 170, 149, 0.3))",
-                fontSize: "12px",
+                background: "linear-gradient(to right, rgba(0, 170, 149, 0.7), rgba(0, 170, 149, 0.3))",
+                fontSize: "14px",
             },
             gravity: "bottom",
             offset: {
@@ -193,8 +193,8 @@ function agregarEscuchaABotonBorrarTicket(){
             text:`Ticket borrado!`,
             duration: 1500,
             style:{
-                background: "linear-gradient(to right, rgba(255, 0, 0, 0.6), rgba(255, 0, 0, 0.3))",
-                fontSize: "12px", 
+                background: "linear-gradient(to right, rgba(255, 0, 0, 0.7), rgba(255, 0, 0, 0.3))",
+                fontSize: "14px", 
             },
             gravity: "bottom",
             offset: {
