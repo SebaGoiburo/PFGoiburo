@@ -66,7 +66,7 @@ function mostrarMensajeBienvenida(username) {
 //mucho más prolijo y modularizado supongo.
 
 
-fetch('https://raw.githubusercontent.com/SebaGoiburo/PFGoiburo/main/js/productos.json')
+fetch('./productos.json')
 .then( respuesta => respuesta.json())
 .then( data  =>{
     console.log(data);
