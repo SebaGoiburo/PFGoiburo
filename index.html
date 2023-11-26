@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Inicia Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!--Finaliza Toastify-->
     <!-- Inicia Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--Finaliza Bootstrap-->
@@ -15,10 +18,11 @@
   <body>
     <!-- Menú -->
     <header>
-      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <!--navbar-light bg-white-->
+      <nav class="navbar navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="/index.html">
-            <img class="logo" src="img/fresco.png" alt="logo red fresco" />
+            <img class="logo" src="img/fresco.svg" alt="logo red fresco" />
           </a>
           <button
             class="navbar-toggler"
@@ -56,6 +60,9 @@
             </form>
           </div>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16" id="botonModoOscuro">
+          <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
       </nav>
     </header>
     <main class="container-fluid">
@@ -92,12 +99,6 @@
           </div>
           <hr>
           <div class="listaProductos" id="listaProductos">
-            <!-- <span class="productoTicket">Papa</span> <span class="cantidad"></span> <span class="precioTicket">$0.00</span><br>
-            <span class="productoTicket">Tomate</span> <span class="cantidad"></span><span class="precioTicket">$0.00</span><br>
-            <span class="productoTicket">Papa</span> <span class="cantidad"></span><span class="precioTicket">$0.00</span><br>
-            <span class="productoTicket">Papa</span> <span class="cantidad"></span><span class="precioTicket">$0.00</span><br>
-            <span class="productoTicket">Papa</span><span class="cantidad"></span> <span class="precioTicket">$0.00</span><br>
-            <span class="productoTicket">Papa</span> <span class="cantidad"></span><span class="precioTicket">$0.00</span><br> -->
           </div>
           <hr>
           <div class="Totales">
@@ -120,7 +121,8 @@
     </footer>
     <!--JavaScript Bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="/js/productos.js"></script>
+    <!--<script src="/js/productos.js"></script>-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="/js/main.js"></script>
   <body>
 </html>

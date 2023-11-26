@@ -5,6 +5,16 @@
   box-sizing: border-box;
 }
 
+body {
+  transition: 0.5s;
+  background-color: #bcebe7;
+}
+
+body.dark-mode {
+  background-color: #333 !important;
+  color: #ffffff;
+}
+
 header {
   min-height: 13vh;
   width: 100%;
@@ -21,7 +31,7 @@ header .navbar {
 }
 header .navbar .navbar-brand .logo {
   justify-content: start;
-  height: 50px;
+  height: 65px;
   width: auto;
 }
 header .navbar .collapse ul {
@@ -34,7 +44,7 @@ header .navbar .collapse ul li {
 }
 header .navbar .collapse ul li a {
   text-decoration: none;
-  color: #00AA95;
+  color: #317A72;
 }
 header .navbar .collapse ul li a:hover {
   font-weight: bold;
@@ -74,6 +84,12 @@ header .navbar .collapse .buscar #lupa {
   height: 20px;
   width: auto;
   margin-left: 10px;
+}
+header .bi {
+  height: 5vh;
+  width: 5vw;
+  color: #00AA95;
+  cursor: pointer;
 }
 
 #popup {
@@ -117,24 +133,24 @@ header .navbar .collapse .buscar #lupa {
 
 #mensajeBienvenida {
   font-family: "DM Sans", sans-serif;
-  font-size: 24px;
-  color: #00AA95;
+  font-size: 28px;
+  font-weight: bold;
+  color: #317A72;
   font-weight: 400;
   margin: 10px;
 }
 
 main {
   min-height: 77vh;
-  background-color: #ffffff;
 }
 main .contenedorProductos {
   margin: auto;
   margin-top: 15px;
   margin-bottom: 15px;
-  border-right: 3px solid #A8A8A8;
-  border-left: 1px solid #A8A8A8;
-  border-top: 2px solid #A8A8A8;
-  border-bottom: 4px solid #A8A8A8;
+  border-right: 3px solid #00AA95;
+  border-left: 1px solid #00AA95;
+  border-top: 2px solid #00AA95;
+  border-bottom: 4px solid #00AA95;
   border-radius: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -144,7 +160,7 @@ main .contenedorProductos {
 main .contenedorProductos .cardProducto {
   height: 150px;
   width: 150px;
-  border: 2px solid #E0E0E0;
+  border: 2px solid #317A72;
   border-radius: 10px;
   margin: auto;
   margin-top: 15px;
@@ -315,7 +331,7 @@ main .mapa iframe {
 
 .ticket {
   border: 1px solid rgb(228, 228, 228);
-  background-color: rgba(255, 255, 255, 0.5333333333);
+  background-color: rgba(255, 255, 255, 0.7921568627);
   border-radius: 3px;
   height: 400px;
   max-width: 300px;
@@ -342,27 +358,37 @@ main .mapa iframe {
   height: 4vh;
   width: 2vw;
   float: right;
+  cursor: pointer;
 }
 .ticket .listaProductos {
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
-.ticket .listaProductos .productoTicket {
-  float: left;
+.ticket .listaProductos .productoYprecio {
+  width: 90%;
+  justify-content: start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.ticket .listaProductos .precioTicket {
+.ticket .iconoBorrarProducto {
+  display: inline;
+  width: 10%;
+  height: 2.3vh;
+  width: 1.2vw;
   float: right;
+  cursor: pointer;
 }
-.ticket .listaProductos #iconoBorrarProducto {
-  height: 2vh;
-  width: 1vw;
-  float: right;
-}
-.ticket .Totales .total {
+
+.Totales .total {
   font-weight: bold;
   font-size: 22px;
   float: left;
 }
-.ticket .Totales #precioTotal {
+.Totales #precioTotal {
   font-weight: bold;
   font-size: 22px;
   float: right;

@@ -1,0 +1,62 @@
+[
+    {
+        "nombre": "Apio",
+        "precio": 25.6,
+        "ubicacionImagen": "img/iconosVerdura/Apio.png"
+    },
+    {
+        "nombre": "Banana",
+        "precio": 90.5,
+        "ubicacionImagen": "img/iconosVerdura/banana.png"
+    },
+    {
+        "nombre": "Brocoli",
+        "precio": 34.5,
+        "ubicacionImagen": "img/iconosVerdura/brocoli.png"
+    },
+    {
+        "nombre": "Frutilla",
+        "precio": 115.2,
+        "ubicacionImagen": "img/iconosVerdura/frutilla.png"
+    },
+    {
+        "nombre": "Lechuga",
+        "precio": 344.25,
+        "ubicacionImagen": "img/iconosVerdura/lechuga.png"
+    },
+    {
+        "nombre": "Limon",
+        "precio": 234.3,
+        "ubicacionImagen": "img/iconosVerdura/limon.png"
+    },
+    {
+        "nombre": "Melón",
+        "precio": 234.87,
+        "ubicacionImagen": "img/iconosVerdura/melon.png"
+    },
+    {
+        "nombre": "Palta",
+        "precio": 234.5,
+        "ubicacionImagen": "img/iconosVerdura/palta.png"
+    },
+    {
+        "nombre": "Papa",
+        "precio": 342.5,
+        "ubicacionImagen": "img/iconosVerdura/papa.png"
+    },
+    {
+        "nombre": "Sandia",
+        "precio": 267.5,
+        "ubicacionImagen": "img/iconosVerdura/sandia.png"
+    },
+    {
+        "nombre": "Tomate",
+        "precio": 734.5,
+        "ubicacionImagen": "img/iconosVerdura/tomate.png"
+    },
+    {
+        "nombre": "Uvas",
+        "precio": 334.5,
+        "ubicacionImagen": "img/iconosVerdura/uvas.png"
+    }
+]
